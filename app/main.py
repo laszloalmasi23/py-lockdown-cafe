@@ -4,7 +4,7 @@ from app.errors import (VaccineError,
                         )
 
 
-def go_to_cafe(friends: dict, cafe: Cafe) -> set:
+def go_to_cafe(friends: dict, cafe: Cafe) -> str:
 
     mask_count = 0
     for friend in friends:
@@ -18,7 +18,7 @@ def go_to_cafe(friends: dict, cafe: Cafe) -> set:
         except NotWearingMaskError:
             mask_count += 1
 
-    if mask_count > 0:
+    if mask_count:
         return f"Friends should buy {mask_count} masks"
 
     return f"Friends can go to {cafe.name}"
