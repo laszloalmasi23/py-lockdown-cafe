@@ -4,7 +4,7 @@ from app.errors import (VaccineError,
                         )
 
 
-def go_to_cafe(friends: dict, cafe: Cafe) -> str:
+def go_to_cafe(friends: list[dict], cafe: Cafe) -> str:
 
     mask_count = 0
     for friend in friends:
